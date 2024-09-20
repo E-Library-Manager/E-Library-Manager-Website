@@ -3,7 +3,7 @@ from flask_cors import CORS
 from datetime import timedelta
 import os
 
-app = Flask(__name__, static_folder='static', template_folder='.')
+app = Flask(__name__, static_folder='static')
 app.secret_key = "randomstring123456"
 app.permanent_session_lifetime = timedelta(minutes=30)
 CORS(app)
