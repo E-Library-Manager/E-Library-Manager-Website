@@ -32,11 +32,6 @@ The Library System is a web-based application for managing books in a library. I
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/shahdmohamed17/library-system.git
-   cd library-system
-   ```
-
 2. Install the required Python packages:
 
    ```bash
