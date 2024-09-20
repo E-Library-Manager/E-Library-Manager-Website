@@ -1,0 +1,249 @@
+/* Root variables for styling */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #f7f7f7;
+    --text-color: #333;
+    --button-color: #4A90E2;
+    --button-text-color: white;
+}
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color);
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 60px;
+}
+
+.logo-container {
+    width: 150px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Login, Signup, and logout buttons */
+#login-btn, #signup-btn, #logout-btn {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#login-btn:hover, #signup-btn:hover, #logout-btn:hover {
+    background-color: #357ABD;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.auth-btn {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.auth-btn:hover {
+    background-color: #357ABD;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* General styling for the user-info */
+.user-info {
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: flex-end; /* Align items to the right */
+    font-size: 18px;
+    color: white;
+}
+/* Make username and logout button inline */
+#username {
+    margin-right: 10px; /* Space between welcome message and logout button */
+}
+
+.quotes-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.quotes-container {
+    font-family: 'Roboto', sans-serif; /* Ensure this is set */
+    color: var(--primary-color); /* Set the desired text color */
+    font-size: 24px; /* Set a font size */
+    transition: color 0.3s; /* Add a transition for color */
+    position: relative;
+    height: 30px; /* Adjust as needed */
+    text-align: center;
+}
+
+
+.quote {
+    margin-right: 50px; /* Space between quotes */
+    font-size: 24px; /* Adjust font size */
+    font-style: italic; /* Italicize quotes */
+    text-align: center;
+    color: var(--primary-color); /* Use your primary color */
+    position: absolute;
+    width: 100%;
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+/* Scroll animation */
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+/* Books section */
+.books-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.books-list {
+    width: 30%;
+}
+
+.books-list h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.books-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.books-list li {
+    background-color: var(--secondary-color);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.books-list button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.books-list button:hover {
+    background-color: #2a6096; /* Highlight color */
+    color: white; /* Ensures the text stays visible */
+}
+
+@media (max-width: 768px) {
+    .books-section {
+        flex-direction: column;
+    }
+ 
+    .books-list {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+ }
+ 
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

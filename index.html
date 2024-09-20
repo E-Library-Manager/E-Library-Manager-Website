@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <!-- Link to the CSS file in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body >
+    <header>
+        <div class="logo-container">
+            <!-- Link to the logo in the static/images folder -->
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Library Logo" class="logo">
+        </div>
+        <div class="user-info">
+            <p id="username" style="display: none;">Welcome, Name</p>
+            <button id="logout-btn" style="display: none;">Log Out</button>
+            <button id="login-btn" onclick="toggleModal('login')">Login</button>
+            <button id="signup-btn" onclick="toggleModal('sign up')">Sign Up</button>
+        </div>
+        
+    </header>
+
+    
+    <main>
+        <section class="quotes-section">
+            <div class="quotes-container">
+                <p id="quote"></p>
+             </div>    
+         </section>
+        <div class="books-section">
+            <div class="books-list">
+                <h2>Available Books</h2>
+                <ul id="unborrowed-books">
+                    <li>Book 1 <button>Borrow</button></li>
+                    <li>Book 2 <button>Borrow</button></li>
+                    <!-- More unborrowed books -->
+                </ul>
+            </div>
+
+            <div class="books-list">
+                <h2>Your Books</h2>
+                <ul id="your-books">
+                    <li>Book A <button>Return</button></li>
+                    <li>Book B <button>Return</button></li>
+                    <!-- More borrowed books -->
+                </ul>
+            </div>
+
+            <div class="books-list">
+                <h2>Borrowed Books</h2>
+                <ul id="borrowed-books">
+                    <li>Book A <button>Return</button></li>
+                    <li>Book B <button>Return</button></li>
+                    <!-- More borrowed books -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Library System. All rights reserved.</p>
+    </footer>
+
+    <!-- Updated Login/Signup Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Login</h2>
+            <form id="auth-form">
+                <label for="name" id="name-label" style="display: none;">Name:</label>
+                <input type="text" id="modal-name" name="name" style="display: none;" required>
+                
+                <label for="username">Username:</label>
+                <input type="text" id="modal-username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="modal-password" name="password" required>
+                
+                <button type="submit" class="auth-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to the JS file in the static folder -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
