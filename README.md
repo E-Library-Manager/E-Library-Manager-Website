@@ -1,6 +1,6 @@
 # E-Library Manager
 
-The Library System is a web-based application for managing books in a library. It allows users to register, log in, log out, and easily borrow, return, and view available and borrowed books. With a responsive design, it offers a user-friendly interface and features an inspirational quotes section. Built with Flask for the backend and HTML, CSS, and JavaScript for the frontend, this project promotes reading and simplifies the borrowing process.
+The E-Library Manager is a web-based application for managing books in a library. It allows users to register, log in, log out, and easily borrow, return, and view available and borrowed books. With a responsive design, it offers a user-friendly interface and features an inspirational quotes section. Built with Flask for the backend and HTML, CSS, and JavaScript for the frontend, this project promotes reading and simplifies the borrowing process.
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ The Library System is a web-based application for managing books in a library. I
 3. Ensure you have the following folder structure:
 
    ```
-   library-system/
+   E-Library-Manager/
    ├── static/
    │   ├── css/
    │   │   └── style.css
