@@ -68,7 +68,7 @@ The E-Library Manager is a web-based application for managing books in a library
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improvements or want to add new features, feel free to submit a pull request or open an issue
+Contributions are welcome! If you have suggestions for improvements or want to add new features, feel free to submit a pull request or open an issue.
 
 ## License
 
